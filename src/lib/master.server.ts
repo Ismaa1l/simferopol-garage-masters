@@ -125,7 +125,7 @@ async function runTool(name: string, args: string) {
   } catch {
     return { error: "Некорректные аргументы" };
   }
-  if (name === "get_free_slots") return { slots: await freeSlots((parsed.date as string | null) ?? null) };
+  if (name === "get_free_slots") return { slots: await freeSlots((parsed["date"] as string | null) ?? null) };
   if (name === "book_slot") return bookSlot(parsed);
   return { error: "Неизвестный инструмент" };
 }
