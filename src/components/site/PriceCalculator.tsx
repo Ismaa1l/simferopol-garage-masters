@@ -42,7 +42,7 @@ export function PriceCalculator() {
   const [serviceId, setServiceId] = useState<ServiceId | "">("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [errors, setErrors] = useState<{ name?: string; phone?: string }>({});
+  const [errors, setErrors] = useState<{ name?: string | undefined; phone?: string | undefined }>({});
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const submit = useServerFn(submitServiceRequest);
